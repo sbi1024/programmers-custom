@@ -17,23 +17,6 @@ public class Level0_한번만등장한문자 {
 
     }
 
-    //    public static String solution(String s) {
-//        String[] splitStr = s.split("");
-//        for (int i = 0; i < splitStr.length; i++) {
-//            int count = 0;
-//            for (int j = 0; j < splitStr.length; j++) {
-//                if (splitStr[i].equals(splitStr[j])) {
-//                    count++;
-//                }
-//                if (count > 1) {
-//                    s = s.replace(splitStr[i], "");
-//                    break;
-//                }
-//            }
-//        }
-//
-//        return Arrays.stream(s.split("")).sorted().collect(Collectors.joining());
-//    }
     public static String solution(String s) {
         String[] splitStr = Arrays.stream(s.split("")).distinct().toArray(String[]::new);
 
