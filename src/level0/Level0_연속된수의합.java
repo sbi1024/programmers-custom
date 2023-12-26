@@ -23,16 +23,12 @@ public class Level0_연속된수의합 {
     }
 
     public static int[] solution(int num, int total) {
-        int sum = 0;
         List<Integer> indexList = new ArrayList<>();
         int startIndex = (total / num) - ((num - 1) / 2);
-        System.out.println("startIndex = " + startIndex);
-        while (sum < total) {
-            sum += startIndex;
+        for (int i = 0; i < num; i++) {
             indexList.add(startIndex);
             startIndex++;
         }
-
         return indexList.stream().mapToInt(Integer::intValue).sorted().toArray();
     }
 }
