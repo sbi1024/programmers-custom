@@ -2,7 +2,7 @@ package level0;
 
 import java.util.Arrays;
 
-public class Level0_조건에맞수열변환하기3 {
+public class Level0_조건에맞게수열변환하기3 {
     public static void main(String[] args) {
         int[] test1 = {1, 2, 3, 100, 99, 98};
         int[] test2 = {1, 2, 3, 100, 99, 98};
