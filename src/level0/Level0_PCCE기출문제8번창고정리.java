@@ -10,7 +10,7 @@ public class Level0_PCCE기출문제8번창고정리 {
         int[] test5 = {2, 4, 3, 1};
         int[] test6 = {1, 1, 1, 1};
         int[] test7 = {5, 3, 5, 3, 7};
-        int[] test8 = {2, 4, 3, 1};
+        int[] test8 = {4,1,4,1,5};
 
         String solution1 = solution(test1, test5);
         System.out.println("solution1 = " + solution1); // pencil
@@ -39,7 +39,7 @@ public class Level0_PCCE기출문제8번창고정리 {
                 }
             }
             if (clean_idx == -1) {
-                clean_storage[num_item] = Integer.toString(num[i]);
+                clean_storage[num_item] = storage[i];
                 clean_num[num_item] = num[i];
                 num_item += 1;
             } else {
