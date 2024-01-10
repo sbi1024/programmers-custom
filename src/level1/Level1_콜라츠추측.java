@@ -13,22 +13,22 @@ public class Level1_콜라츠추측 {
     }
 
     public static int solution(int num) {
-        int answer = 0;
         if (num == 1) {
-            return 1;
+            return num;
         }
 
-        while (true) {
-            if (num == 1) {
-                break;
-            } else if (num % 2 == 0) {
-                num /= 2;
+        int answer = 0;
+        long lNum = num;
+        while (lNum != 1) {
+            if (answer == 500) {
+                return -1;
+            } else if (lNum % 2 == 0) {
+                lNum /= 2;
             } else {
-                num = num * 3 + 1;
+                lNum = lNum * 3 + 1;
             }
             answer++;
         }
-
         return answer;
     }
 }
