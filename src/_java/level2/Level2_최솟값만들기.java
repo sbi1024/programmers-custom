@@ -23,6 +23,7 @@ public class Level2_최솟값만들기 {
 
         PriorityQueue<Integer> pq1 = new PriorityQueue<>();
         PriorityQueue<Integer> pq2 = new PriorityQueue<>(Collections.reverseOrder());
+
         for (int a : A) pq1.add(a);
         for (int b : B) pq2.add(b);
 
