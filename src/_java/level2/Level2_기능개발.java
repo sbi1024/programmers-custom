@@ -19,13 +19,10 @@ public class Level2_기능개발 {
     }
 
     public static int[] solution(int[] progresses, int[] speeds) {
-        int[] answer = {};
-
         int progressIndex = 0;
         Integer[] tempProgresses = new Integer[progresses.length];
         for (int i = 0; i < progresses.length; i++) tempProgresses[i] = progresses[i];
-        Queue<Integer> queue = new LinkedList<>();
-        for (Integer temp : tempProgresses) queue.add(temp);
+        Queue<Integer> queue = new LinkedList<>(Arrays.asList(tempProgresses));
         List<Integer> list = new ArrayList<>();
 
         while (!queue.isEmpty()) {
@@ -44,7 +41,7 @@ public class Level2_기능개발 {
             }
         }
 
-        answer = new int[list.size()];
+        int[] answer = new int[list.size()];
         for (int i = 0; i < list.size(); i++) {
             answer[i] = list.get(i);
         }
