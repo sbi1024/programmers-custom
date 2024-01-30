@@ -21,7 +21,7 @@ public class Level2_프로세스 {
     }
 
     public static int solution(int[] priorities, int location) {
-        int answer = 0;
+        int answer = 1;
 
         Queue<Integer> queue = new LinkedList<>();
         for (int priority : priorities) queue.add(priority);
@@ -36,12 +36,18 @@ public class Level2_프로세스 {
                     break;
                 }
             }
+
             if (checkStatus) {
                 queue.poll();
                 queue.add(standValue);
             } else {
                 queue.poll();
+                if (location == 0) return answer;
+                answer++;
             }
+
+            location--;
+            if (location < 0) location = queue.size() - 1;
         }
 
         return answer;
