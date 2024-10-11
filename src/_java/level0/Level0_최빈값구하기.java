@@ -1,9 +1,8 @@
 package _java.level0;
 
-import java.util.Arrays;
-
 public class Level0_최빈값구하기 {
     // TODO 문제는 풀었는데 반복문이 너무 많은거 같은데,, 다른 자료구조로 풀어봐야 하나 ?
+
 
     public static void main(String[] args) {
         int[] test1 = {1, 2, 3, 3, 3, 4};
@@ -29,6 +28,30 @@ public class Level0_최빈값구하기 {
     }
 
     public static int solution(int[] array) {
+        // 각 배열에 카운팅한 값을 할당
+        int[] result = new int[1000];
+        for (int i = 0; i < array.length; i++) {
+            result[array[i]]++;
+        }
+
+        // 최빈값을 확인
+        int max = 0;
+        int maxIndex = 0;
+        boolean multiple = false;
+        for (int i = 0; i < result.length; i++) {
+            if (result[i] > max) {
+                max = result[i];
+                maxIndex = i;
+                multiple = false;
+            } else if (result[i] == max) {
+                multiple = true;
+            }
+        }
+
+        return multiple ? -1 : maxIndex;
+    }
+
+    public static int solution1(int[] array) {
         // 각 배열에 카운팅한 값을 할당
         int[] result = new int[1000];
         for (int i = 0; i < array.length; i++) {

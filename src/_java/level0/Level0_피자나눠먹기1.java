@@ -10,19 +10,12 @@ public class Level0_피자나눠먹기1 {
 
         int solution3 = solution(15);
         System.out.println("solution3 = " + solution3);
+
+        int solution4 = solution(100);
+        System.out.println("solution4 = " + solution4);
     }
 
     public static int solution(int n) {
-        int answer = 1;
-        while (true) {
-            int remain = (7 * answer) % n;
-            if (remain == 0) {
-                return answer;
-            } else if (remain < 7) {
-                return answer;
-            } else {
-                answer += 1;
-            }
-        }
+        return (n / 7) + (n % 7 >= 1 ? 1 : 0);
     }
 }

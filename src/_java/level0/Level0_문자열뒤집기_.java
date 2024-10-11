@@ -10,7 +10,11 @@ public class Level0_문자열뒤집기_ {
     }
 
     public static String solution(String my_string) {
-         String answer = "";
+        return new StringBuilder(my_string).reverse().toString();
+    }
+
+    public static String solution1(String my_string) {
+        String answer = "";
         int length = my_string.length();
         for (int i = length - 1; i >= 0; i--) {
             answer += my_string.charAt(i);
