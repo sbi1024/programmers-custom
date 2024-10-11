@@ -10,6 +10,8 @@ public class Level0_두수의나눗셈 {
 
         int solution3 = solution(1, 16);
         System.out.println("solution3 = " + solution3);
+
+
     }
 
     public static int solution(int num1, int num2) {
