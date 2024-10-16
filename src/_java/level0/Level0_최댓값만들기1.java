@@ -18,6 +18,12 @@ public class Level0_최댓값만들기1 {
     }
 
     public static int solution(int[] numbers) {
+
+        Arrays.sort(numbers);
+        return numbers[numbers.length - 1] * numbers[numbers.length - 2];
+    }
+
+    public static int solution1(int[] numbers) {
         List<Integer> list = Arrays.stream(numbers).boxed().sorted(Collections.reverseOrder()).collect(Collectors.toList());
         return list.get(0) * list.get(1);
     }

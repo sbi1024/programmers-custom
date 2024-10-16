@@ -2,9 +2,9 @@ package _java.level0;
 
 public class Level0_공던지기 {
     public static void main(String[] args) {
-        int[] test1 = {1,2,3,4};
-        int[] test2 = {1,2,3,4,5,6};
-        int[] test3 = {1,2,3};
+        int[] test1 = {1, 2, 3, 4};
+        int[] test2 = {1, 2, 3, 4, 5, 6};
+        int[] test3 = {1, 2, 3};
 
         int solution1 = solution(test1, 2);
         System.out.println("solution1 = " + solution1);
