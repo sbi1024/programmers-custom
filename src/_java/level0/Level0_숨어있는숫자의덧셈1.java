@@ -10,8 +10,24 @@ public class Level0_숨어있는숫자의덧셈1 {
         int solution2 = solution("1a2b3c4d123");
         System.out.println("solution2 = " + solution2);
     }
-
     public static int solution(String my_string) {
+        char[] charArray = my_string.replaceAll("[A-z]", "").toCharArray();
+        int sum = 0 ;
+        for (char ch : charArray) {
+            sum += (ch - '0');
+        }
+        return sum;
+    }
+
+
+
+
+
+
+
+
+
+    public static int solution1(String my_string) {
         return Arrays.stream(my_string.replaceAll("[^0-9]", "").split("")).mapToInt(Integer::parseInt).sum();
     }
 }

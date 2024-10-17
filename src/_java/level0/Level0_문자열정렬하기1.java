@@ -15,6 +15,17 @@ public class Level0_문자열정렬하기1 {
     }
 
     public static int[] solution(String my_string) {
+        String[] strArray = my_string.replaceAll("[a-z]", "").split("");
+        int[] result = new int[strArray.length];
+        for (int i = 0; i < result.length; i++) {
+            result[i] = Integer.parseInt(strArray[i]);
+        }
+        Arrays.sort(result);
+        return result;
+    }
+
+
+    public static int[] solution1(String my_string) {
         return Arrays.stream(my_string.replaceAll("[^0-9]", "").split("")).sorted().mapToInt(Integer::parseInt).toArray();
     }
 }
