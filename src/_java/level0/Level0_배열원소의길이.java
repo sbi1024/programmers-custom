@@ -14,6 +14,13 @@ public class Level0_배열원소의길이 {
     }
 
     public static int[] solution(String[] strList) {
-        return Arrays.stream(strList).mapToInt(value -> value.length()).toArray();
+        int[] result = new int[strList.length];
+        for (int i = 0; i < strList.length; i++) {
+            result[i] = strList[i].length();
+        }
+        return result;
     }
+//    public static int[] solution(String[] strList) {
+//        return Arrays.stream(strList).mapToInt(value -> value.length()).toArray();
+//    }
 }

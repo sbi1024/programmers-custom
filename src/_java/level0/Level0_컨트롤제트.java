@@ -19,16 +19,30 @@ public class Level0_컨트롤제트 {
     }
 
     public static int solution(String s) {
-        int answer = 0;
-        String[] splitS = s.split(" ");
-        for (int i = 0; i < splitS.length; i++) {
-            String splitStr = splitS[i];
-            if (splitStr.equals("Z")) {
-                answer -= Integer.parseInt(splitS[i - 1]);
+        String[] split = s.split(" ");
+        int sum = 0;
+        for (int i = 0; i < split.length; i++) {
+            if (split[i].equals("Z")) {
+                sum -= Integer.parseInt(split[i - 1]);
             } else {
-                answer += Integer.parseInt(splitS[i]);
+                sum += Integer.parseInt(split[i]);
             }
         }
-        return answer;
+        return sum;
     }
+
+
+//    public static int solution(String s) {
+//        int answer = 0;
+//        String[] splitS = s.split(" ");
+//        for (int i = 0; i < splitS.length; i++) {
+//            String splitStr = splitS[i];
+//            if (splitStr.equals("Z")) {
+//                answer -= Integer.parseInt(splitS[i - 1]);
+//            } else {
+//                answer += Integer.parseInt(splitS[i]);
+//            }
+//        }
+//        return answer;
+//    }
 }
